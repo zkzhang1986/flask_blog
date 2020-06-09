@@ -1,0 +1,23 @@
+# 创建一个叫 blog 的文件夹作为项目文件夹并进入
+mkdir blog
+cd blog
+
+# 初始化虚拟环境
+pipenv install
+
+# 这里改一下 Pipfile 里面的源
+# https://mirrors.aliyun.com/pypi/simple
+
+# 安装 flask
+pipenv install flask
+
+# 激活虚拟环境
+pipenv shell
+
+
+退出虚拟环境使用 exit 命令， 这时候那对括号就消失了。
+pipenv run
+另外，pipenv 还准备了一个 run 命令，它可以在你不必显示激活虚拟环境的情况下，用虚拟环境执行命令，
+例如：
+pipenv run python -m http.server
+pipenv run python main.py
