@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>我的博客</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		header,footer{
+			padding: 30px 40px;
+			background: #f2f2f2;
+			color:#666;
+		}
+		header a{
+			padding: 0 20px;
+			color:#999;
+			text-decoration: none;
+		}
+		header a:hover{
+			color:#333;
+		}
+		footer{
+			text-align: center;
+		}
+		#content{
+			paddding: 30px 40px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="{{url_for('index')}}">首页</a>
+		<a href="{{url_for('list')}}">文章</a>
+		<a href="{{url_for('about')}}">关于</a>
+	</header>
+	<div id="content">
+		{% block body %}
+		{% endblock %}
+	</div>
+	<footer>Copyright @ EasyBlog</footer>
+</body>
+</html>
